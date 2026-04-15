@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hotstar-deployment
+  name: starbuks-deployment
   namespace: pro
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hotstar
+      app: starbuks
   template:
     metadata:
       labels:
-        app: hotstar
+        app: starbuks
     spec:
       containers:
-      - name: hotstar
+      - name: starbuks
         image: puneetdeshiya1/starbucks:latest
         ports:
         - containerPort: 80
