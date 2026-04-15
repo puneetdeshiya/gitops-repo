@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: starbuks-deployment
+  name: nginx-demo-deployment
   namespace: pro
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: starbuks
+      app: nginx-demo
   template:
     metadata:
       labels:
-        app: starbuks
+        app: nginx-demo
     spec:
       containers:
-      - name: starbuks
-        image: puneetdeshiya1/starbucks:latest
+      - name: nginx-demo
+        image: puneetdeshiya1/nginx-demo:1.0
         ports:
         - containerPort: 80
