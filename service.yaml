@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: starbuk-service
+  name: starbuks-service
   namespace: pro
 spec:
   selector:
-    app: starbuk
+    app: starbuks
   ports:
   - port: 80
     targetPort: 80
