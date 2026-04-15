@@ -1,34 +1,12 @@
 apiVersion: v1
-items:
-- apiVersion: v1
-  kind: Service
-  metadata:
-    annotations:
-      kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"pro-service","namespace":"pro"},"spec":{"ports":[{"port":80,"targetPort":80}],"selector":{"app":"pro"},"type":"ClusterIP"}}
-    creationTimestamp: "2026-01-07T07:41:56Z"
-    name: pro-service
-    namespace: pro
-    resourceVersion: "136845"
-    uid: 6ec35515-dccc-4711-8239-7d826645b339
-  spec:
-    clusterIP: 10.96.157.17
-    clusterIPs:
-    - 10.96.157.17
-    internalTrafficPolicy: Cluster
-    ipFamilies:
-    - IPv4
-    ipFamilyPolicy: SingleStack
-    ports:
-    - port: 80
-      protocol: TCP
-      targetPort: 80
-    selector:
-      app: pro
-    sessionAffinity: None
-    type: ClusterIP
-  status:
-    loadBalancer: {}
-kind: List
+kind: Service
 metadata:
-  resourceVersion: ""
+  name: hotstar-service
+  namespace: pro
+spec:
+  selector:
+    app: hotstar
+  ports:
+  - port: 80
+    targetPort: 80
+  type: ClusterIP
