@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: hotstar
-        image: puneetdeshiya1/hotstar:latest
+        image: puneetdeshiya1/starbucks:latest
         ports:
         - containerPort: 80
